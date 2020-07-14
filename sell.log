@@ -1,0 +1,341 @@
+2020-07-08 09:58:08.171  WARN 1480 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-07-08 09:58:13.176  INFO 1480 --- [main] cn.jucheng.sell.LoggerTest               : Starting LoggerTest on jc-macdeMac-mini-3.local with PID 1480 (started by jc-mac in /Users/jc-mac/IdeaProjects/sell)
+2020-07-08 09:58:13.177  INFO 1480 --- [main] cn.jucheng.sell.LoggerTest               : No active profile set, falling back to default profiles: default
+2020-07-08 09:58:14.852  INFO 1480 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-08 09:58:15.283  INFO 1480 --- [main] cn.jucheng.sell.LoggerTest               : Started LoggerTest in 17.757 seconds (JVM running for 19.116)
+2020-07-08 09:58:15.514  INFO 1480 --- [main] cn.jucheng.sell.LoggerTest               : info big ha
+2020-07-08 09:58:15.531  INFO 1480 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-08 11:14:49.417 ERROR 2008 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:363) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:323) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:308) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:238) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:212) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:364) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:331) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) [spring-boot-test-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.13.jar:4.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) [junit-4.13.jar:4.13]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) [junit-4.13.jar:4.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.13.jar:4.13]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$3(Binder.java:414) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:571) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:512) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:414) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:375) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:319) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	... 44 common frames omitted
+
+2020-07-08 11:14:49.420 ERROR 2008 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@74235045] to prepare test instance [cn.jucheng.sell.LoggerTest@2eea88a1]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.13.jar:4.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) [junit-4.13.jar:4.13]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) [junit-4.13.jar:4.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.13.jar:4.13]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+Caused by: org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:363) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:323) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:308) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:238) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:212) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:364) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:331) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 25 common frames omitted
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$3(Binder.java:414) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:571) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:512) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:414) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:375) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:319) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	... 44 common frames omitted
+
+2020-07-08 11:19:41.413 ERROR 2044 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:363) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:323) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:308) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:238) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:212) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:364) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:331) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) [spring-boot-test-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.13.jar:4.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) [junit-4.13.jar:4.13]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) [junit-4.13.jar:4.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.13.jar:4.13]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$3(Binder.java:414) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:571) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:512) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:414) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:375) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:319) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	... 44 common frames omitted
+
+2020-07-08 11:19:41.441 ERROR 2044 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@2b71e916] to prepare test instance [cn.jucheng.sell.repository.ProductCategoryRepositoryTest@238d68ff]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.13.jar:4.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) [junit-4.13.jar:4.13]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) [junit-4.13.jar:4.13]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) [junit-4.13.jar:4.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.13.jar:4.13]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+Caused by: org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:363) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:323) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:308) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:238) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:212) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:364) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:331) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 25 common frames omitted
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:321) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:194) ~[spring-core-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$3(Binder.java:414) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:571) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:512) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:414) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:375) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:319) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	... 44 common frames omitted
+
+2020-07-08 11:21:48.235  WARN 2056 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-07-08 11:21:53.292  INFO 2056 --- [main] c.j.s.r.ProductCategoryRepositoryTest    : Starting ProductCategoryRepositoryTest on jc-macdeMac-mini-3.local with PID 2056 (started by jc-mac in /Users/jc-mac/IdeaProjects/sell)
+2020-07-08 11:21:53.293  INFO 2056 --- [main] c.j.s.r.ProductCategoryRepositoryTest    : No active profile set, falling back to default profiles: default
+2020-07-08 11:21:54.367  INFO 2056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-08 11:21:54.499  INFO 2056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113ms. Found 1 JPA repository interfaces.
+2020-07-08 11:21:55.626  INFO 2056 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-08 11:21:55.647  INFO 2056 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-08 11:21:55.654  WARN 2056 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-07-08 11:21:56.180  INFO 2056 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-08 11:21:56.252  INFO 2056 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-08 11:21:56.378  INFO 2056 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-08 11:21:56.809  WARN 2056 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-08 11:21:56.917  INFO 2056 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-08 11:21:57.183  INFO 2056 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-07-08 11:21:57.961  INFO 2056 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-08 11:21:58.613  INFO 2056 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-08 11:21:58.627  INFO 2056 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-08 11:21:58.973  INFO 2056 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-08 11:21:58.988  INFO 2056 --- [main] c.j.s.r.ProductCategoryRepositoryTest    : Started ProductCategoryRepositoryTest in 21.789 seconds (JVM running for 24.345)
+2020-07-08 11:21:59.307  INFO 2056 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-08 11:21:59.313  INFO 2056 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-08 11:21:59.313  INFO 2056 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-08 11:21:59.390  INFO 2056 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-08 11:23:07.572  WARN 2064 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-07-08 11:23:12.604  INFO 2064 --- [main] c.j.s.r.ProductCategoryRepositoryTest    : Starting ProductCategoryRepositoryTest on jc-macdeMac-mini-3.local with PID 2064 (started by jc-mac in /Users/jc-mac/IdeaProjects/sell)
+2020-07-08 11:23:12.605  INFO 2064 --- [main] c.j.s.r.ProductCategoryRepositoryTest    : No active profile set, falling back to default profiles: default
+2020-07-08 11:23:13.548  INFO 2064 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-08 11:23:13.648  INFO 2064 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84ms. Found 1 JPA repository interfaces.
+2020-07-08 11:23:14.934  INFO 2064 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-08 11:23:14.972  INFO 2064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-08 11:23:14.980  WARN 2064 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-07-08 11:23:15.443  INFO 2064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-08 11:23:15.525  INFO 2064 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-08 11:23:15.643  INFO 2064 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-08 11:23:16.076  WARN 2064 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-08 11:23:16.116  INFO 2064 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-08 11:23:16.549  INFO 2064 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-07-08 11:23:17.358  INFO 2064 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-08 11:23:17.871  INFO 2064 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-08 11:23:17.885  INFO 2064 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-08 11:23:18.220  INFO 2064 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-08 11:23:18.240  INFO 2064 --- [main] c.j.s.r.ProductCategoryRepositoryTest    : Started ProductCategoryRepositoryTest in 21.296 seconds (JVM running for 24.153)
+2020-07-08 11:23:18.647  INFO 2064 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-08 11:23:18.651  INFO 2064 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-08 11:23:18.651  INFO 2064 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-08 11:23:18.722  INFO 2064 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-07-08 11:24:07.822  WARN 2067 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5004 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-07-08 11:24:12.830  INFO 2067 --- [main] c.j.s.r.ProductCategoryRepositoryTest    : Starting ProductCategoryRepositoryTest on jc-macdeMac-mini-3.local with PID 2067 (started by jc-mac in /Users/jc-mac/IdeaProjects/sell)
+2020-07-08 11:24:12.831  INFO 2067 --- [main] c.j.s.r.ProductCategoryRepositoryTest    : No active profile set, falling back to default profiles: default
+2020-07-08 11:24:13.569  INFO 2067 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-08 11:24:13.652  INFO 2067 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 1 JPA repository interfaces.
+2020-07-08 11:24:14.484  INFO 2067 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-08 11:24:14.507  INFO 2067 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-08 11:24:14.828  INFO 2067 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-08 11:24:14.925  INFO 2067 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-08 11:24:15.030  INFO 2067 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-08 11:24:15.377  WARN 2067 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-08 11:24:15.430  INFO 2067 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-08 11:24:15.700  INFO 2067 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-07-08 11:24:16.558  INFO 2067 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-08 11:24:17.124  INFO 2067 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-08 11:24:17.138  INFO 2067 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-08 11:24:17.511  INFO 2067 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-08 11:24:17.528  INFO 2067 --- [main] c.j.s.r.ProductCategoryRepositoryTest    : Started ProductCategoryRepositoryTest in 20.284 seconds (JVM running for 21.86)
+2020-07-08 11:24:17.773  INFO 2067 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-08 11:24:17.776  INFO 2067 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-08 11:24:17.777  INFO 2067 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-07-08 11:24:17.795  INFO 2067 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

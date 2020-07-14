@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.1.108/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  freemarker:
+    suffix: .ftl
+    check-template-location: true
+    content-type: text/html
+    cache: false
+    charset: UTF-8
+  redis:
+    host: 192.168.1.108
+    port: 6379
+project-url:
+  wechatMpAuthorize: http://bigliang.nat300.top
+  sell: http://bigliang.nat300.top
+
+server:
+  servlet:
+    context-path: /sell
+
+
+wechat:
+  appId: wx24547e18d39467d9
+  secret: 3ba013b68bd16d19e7bdf1bc87f49f70
+
