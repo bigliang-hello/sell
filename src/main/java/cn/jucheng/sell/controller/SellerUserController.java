@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
@@ -53,8 +55,20 @@ public class SellerUserController {
         return new ModelAndView("redirect:" + projectUrl.getSell() + "/sell/seller/order/list");
     }
 
-//    @GetMapping("/logout")
-//    public ModelAndView logout(){
-//
-//    }
+    @GetMapping("/logout")
+    public ModelAndView logout(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map){
+        Cookie cookie = CookieUtil.get(request, "token");
+        if (cookie != null){
+            redisTemplate.opsForValue().getOperations().delete(String.format(RedisConstant.TOKEN_PREFIX, cookie.getValue()));
+
+            //清除cookie
+            CookieUtil.set(response, "token", null, 0);
+        }
+
+        map.put("msg", ResultEnum.LOGOUT_SUCCESS.getMessage());
+        map.put("url", "/sell/seller/order/list");
+        return new ModelAndView("common/success");
+    }
+
+
 }

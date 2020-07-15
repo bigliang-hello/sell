@@ -13,6 +13,8 @@ import cn.jucheng.sell.repository.OrderDetailRepository;
 import cn.jucheng.sell.repository.OrderMasterRepository;
 import cn.jucheng.sell.service.OrderService;
 import cn.jucheng.sell.service.ProductService;
+import cn.jucheng.sell.service.PushService;
+import cn.jucheng.sell.service.WebSocket;
 import cn.jucheng.sell.utils.KeyUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +42,12 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private ProductService productService;
+
+    @Autowired
+    private PushService pushService;
+
+    @Autowired
+    private WebSocket webSocket;
 
     @Override
     @Transactional
@@ -74,6 +82,9 @@ public class OrderServiceImpl implements OrderService {
 
         List<CartDTO> cartDTOList = orderDTO.getOrderDetailList().stream().map(e -> new CartDTO(e.getProductId(),e.getProductQuantity())).collect(Collectors.toList());
         productService.decreaseStock(cartDTOList);
+
+        //fa消息
+        webSocket.sendMessage("有新的订单");
 
         return orderDTO;
     }
@@ -148,6 +159,7 @@ public class OrderServiceImpl implements OrderService {
         if (masterResult == null){
             throw new SellException(ResultEnum.ORDER_UPDATE_FAIL);
         }
+        pushService.orderStatus(orderDTO);
         return orderDTO;
     }
 

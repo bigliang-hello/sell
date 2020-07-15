@@ -5,6 +5,7 @@ import cn.jucheng.sell.exception.SellException;
 import cn.jucheng.sell.form.CategoryForm;
 import cn.jucheng.sell.service.CategoryService;
 import com.sun.org.apache.xpath.internal.operations.Mod;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/seller/category")
+@Slf4j
 public class SellerCategoryController {
 
     @Autowired
